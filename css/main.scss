@@ -227,7 +227,7 @@ body {
       overflow: hidden;
       &-img {
         grid-area: image;
-        transform: skew(5deg);
+        transform: skew(3deg);
         display: inline-block;
         overflow: hidden;
         height: 8rem;
@@ -444,12 +444,18 @@ body {
       }
     }
   }
+  .reviews-main-heading {
+    font-size: 1.7rem;
+  }
   .reviews-main-one {
     grid-template-areas:
       "image image"
       " details details";
     grid-template-rows: 20% 80%;
     grid-gap: 0rem;
+    &-head {
+      padding: 0;
+    }
   }
   .reviews-main-two {
     grid-template-areas:
@@ -457,6 +463,9 @@ body {
       " details details";
     grid-template-rows: 20% 80%;
     grid-gap: 0rem;
+    &-head {
+      padding: 0;
+    }
   }
   .reviews-main-three {
     grid-template-areas:
@@ -464,5 +473,30 @@ body {
       " details details";
     grid-template-rows: 20% 80%;
     grid-gap: 0rem;
+    &-head {
+      padding: 0;
+    }
+  }
+  .reviews {
+    transform: skew(0deg);
+    &-main {
+      &-one,
+      &-two,
+      &-three {
+        &-img {
+          transform: skew(0deg);
+        }
+        &-head {
+          &-heading {
+            transform: skew(0deg);
+          }
+
+          &-details {
+            transform: skew(0deg);
+          }
+        }
+        transform: skew(0deg);
+      }
+    }
   }
 }
